@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b4524ef-9021-458c-8660-8da0d28a6b90" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="leetcode" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="leetcode" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="leetcode" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="leetcode: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="leetcode" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="leetcode: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="discussion_que: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="H:\back_server\work_place\ourLeetcode\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="H:\back_server\Maven\MyLocalRepository" />
+        <option name="userSettingsFile" value="H:\back_server\Maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZwW5wyvLQYJXWXVCscX6AYuOv0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3954023" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="OurleetcodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ourleetcode" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.OurleetcodeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b4524ef-9021-458c-8660-8da0d28a6b90" name="Default Changelist" comment="" />
+      <created>1585750456851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585750456851</updated>
+      <workItem from="1585750461540" duration="815000" />
+      <workItem from="1585923045378" duration="86000" />
+      <workItem from="1586002405638" duration="9000" />
+      <workItem from="1586004383611" duration="10606000" />
+      <workItem from="1586017728243" duration="126000" />
+      <workItem from="1586017920400" duration="38000" />
+      <workItem from="1586017982405" duration="136000" />
+      <workItem from="1586066665443" duration="10097000" />
+      <workItem from="1586099696783" duration="247000" />
+    </task>
+    <task id="LOCAL-00001" summary="用户添加讨论接口">
+      <created>1586017554011</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586017554012</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加了讨论的修改和删除">
+      <created>1586097959055</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586097959055</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加讨论主体" />
+    <MESSAGE value="用户添加讨论接口" />
+    <MESSAGE value="增加了讨论的修改和删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了讨论的修改和删除" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="76" key="#Notifications" timestamp="1586099089763">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="76" key="#Notifications/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099089763" />
+    <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586011058915">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586011058915" />
+    <state x="490" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586010719419">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="490" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586010719419" />
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1586094313356">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586094313356" />
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1586067336724" />
+    <state x="614" y="306" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586099847613">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="614" y="306" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099847613" />
+    <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586015298481">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586015298481" />
+    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1586097956583">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586097956583" />
+    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1586017932494" />
+    <state x="296" y="106" key="FileChooserDialogImpl" timestamp="1586013604996">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="296" y="106" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586013604996" />
+    <state x="296" y="106" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586009759003" />
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1586099923684">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923684" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1586099923684">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923684" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1586099923683">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923683" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1586099923684">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923684" />
+    <state width="1493" height="112" key="GridCell.Tab.1.bottom" timestamp="1586099923685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.1.bottom/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923685" />
+    <state width="1493" height="112" key="GridCell.Tab.1.center" timestamp="1586099923685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.1.center/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923685" />
+    <state width="1493" height="112" key="GridCell.Tab.1.left" timestamp="1586099923684">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.1.left/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923684" />
+    <state width="1493" height="112" key="GridCell.Tab.1.right" timestamp="1586099923685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.1.right/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099923685" />
+    <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1586099239810">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099239810" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1586013608465">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586013608465" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1585750649418" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1586018012968">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586017652521" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1586018012968" />
+    <state x="449" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586066665231">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="449" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1586066665231" />
+    <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586099904349">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586099904349" />
+    <state x="562" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1586066679081" />
+    <state x="93" y="93" width="1350" height="648" key="dock-window-1" timestamp="1586014804262">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="dock-window-1/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586014804262" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1586068243363">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586068243363" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1586066810101" />
+  </component>
+</project>
