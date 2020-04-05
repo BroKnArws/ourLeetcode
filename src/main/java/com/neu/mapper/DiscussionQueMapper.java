@@ -12,5 +12,17 @@ public interface DiscussionQueMapper {
     /**
      * 创建讨论
      */
-    void createDiscussionQue(DiscussionQue discussionQue);
+    public void createDiscussionQue(DiscussionQue discussionQue);
+    /**
+     * 修改讨论
+     */
+    public int EditDiscussionQue(DiscussionQue discussionQue);
+    /**
+     * 获取讨论by_id
+     */
+    public DiscussionQue getDiscussionQueById(int id);
+    /**
+     * 删除讨论
+     */
+    public int delDiscussionQueById(int id);
 }

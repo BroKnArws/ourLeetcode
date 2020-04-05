@@ -21,4 +21,13 @@ public class DiscussionQueService {
         discussionQueMapper.createDiscussionQue(discussionQue);
         return discussionQue.getId();
     }
+    public boolean EditDiscussionQue(DiscussionQue discussionQue) {
+        return discussionQueMapper.EditDiscussionQue(discussionQue) == 1;
+    }
+    public DiscussionQue getById(int id) {
+        return discussionQueMapper.getDiscussionQueById(id);
+    }
+    public boolean delDiscussionQue(int id) {
+        return discussionQueMapper.delDiscussionQueById(id) == 1;
+    }
 }
