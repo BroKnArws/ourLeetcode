@@ -9,15 +9,13 @@ import com.neu.exception.BaseException;
 import com.neu.exception.UnknownException;
 import com.neu.exception.general.FormValidatorException;
 import com.neu.exception.general.PermissionDeniedException;
-import com.neu.exception.general.ResourceNotExistedException;
+import com.neu.exception.general.ResourceNotExistException;
 import com.neu.service.DiscussionQueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 /**
 * @author lzs
@@ -85,7 +83,7 @@ public class DiscussionQueController {
         DiscussionQue origin = discussionQueService.getById(editRequest.getId());
 
         if (origin == null) {
-            throw new ResourceNotExistedException("讨论不存在");
+            throw new ResourceNotExistException("讨论");
         }
 
         if(origin.getCreatorId() != userId) {
@@ -115,7 +113,7 @@ public class DiscussionQueController {
 
         DiscussionQue origin = discussionQueService.getById(id);
         if (origin == null) {
-            throw new ResourceNotExistedException("讨论不存在");
+            throw new ResourceNotExistException("讨论");
         }
         if(origin.getCreatorId() != userId) {
             throw new PermissionDeniedException();
