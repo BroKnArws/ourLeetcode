@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.mapper.CircleMapper">
+
+    <resultMap id="author" type="com.neu.vo.Author">
+        <id column="u_id" property="id"/>
+        <result column="u_user_name" property="userName"/>
+        <result column="u_user_avatar" property="userAvatar"/>
+    </resultMap>
+
+    <resultMap id="ArticlePreviews" type="com.neu.dto.response.ArticlePreview">
+        <id column="a_id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="browse" property="browse"/>
+        <result column="summary" property="summary"/>
+        <result column="initialize_time" property="initializeTime"/>
+        <result column="edit_time" property="editTime"/>
+        <result column="thumbnail" property="thumbnail"/>
+        <result column="topic_name" property="topicName"/>
+        <result column="likes" property="likes"/>
+        <result column="thinks" property="thinks"/>
+        <result column="surprises" property="surprises"/>
+        <result column="article_comments" property="articleComments"/>
+        <association property="author" resultMap="author"/>
+    </resultMap>
+
+    <select id="com.neu.mapper.CircleMapper.selectArticlesByPages" resultType="com.neu.entity.Article">
+        select id,topic_id,title,browse,initialize_time,edit_time,likes,thinks,surprises from article limit #{startPage},#{endPage}
+    </select>
+
+    <select id="com.neu.mapper.CircleMapper.selectTopicByTopicId" resultType="java.lang.String">
+        select topic_name from topic where id = #{id}
+    </select>
+
+    <select id="com.neu.mapper.CircleMapper.selectLabelByLinkId" resultType="com.neu.entity.LeetcodeLabel">
+        select label_name from leetcode_label where link_id = #{id}
+    </select>
+
+
+
+    <select id="com.neu.mapper.CircleMapper.selectArticlePreviewsByPage" resultMap="ArticlePreviews">
+        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,likes,thinks,surprises,article_comments,u.id u_id,u.user_name u_user_name,u.user_avatar u_user_avatar
+        from article a
+        LEFT JOIN topic  t
+        ON a.topic_id = t.id
+        LEFT JOIN leetcode_user u
+        ON a.creator_id = u.id
+        limit #{startPage},#{endPage}
+    </select>
+
+    <select id="com.neu.mapper.CircleMapper.selectArticlePreviewsByAuthorIdAndPage" resultMap="ArticlePreviews">
+        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,likes,thinks,surprises,article_comments,u.id u_id,u.user_name u_user_name,u.user_avatar u_user_avatar
+        from article a
+        LEFT JOIN topic  t
+        ON a.topic_id = t.id
+        LEFT JOIN leetcode_user u
+        ON a.creator_id = u.id
+        where creator_id = #{authorId}
+        limit #{startPage},#{endPage}
+    </select>
+
+
+</mapper>

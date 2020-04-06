@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="leetcode2@60.205.214.42" uuid="e9da5ea5-a935-4936-a283-72f5d6eb20a6">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://60.205.214.42:3306/leetcode2</jdbc-url>
+    </data-source>
+  </component>
+</project>
