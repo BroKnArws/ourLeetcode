@@ -3,10 +3,11 @@ package com.neu.mapper;
 import com.neu.entity.Draft;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Mapper
+@Repository
 public interface DraftMapper {
     List<Draft> selectDraftList(@Param("authorId") Integer authorId, @Param("startPage")int startPage,@Param("endPage") int endPage);
 

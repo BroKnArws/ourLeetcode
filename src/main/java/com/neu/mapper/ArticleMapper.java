@@ -4,11 +4,12 @@ import com.neu.entity.Article;
 import com.neu.entity.ArticleComment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@Mapper
+@Repository
 public interface ArticleMapper {
     Article selectOneArticleById(Integer articleId);
 

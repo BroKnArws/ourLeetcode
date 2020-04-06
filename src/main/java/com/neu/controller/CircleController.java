@@ -34,7 +34,7 @@ public class CircleController {
 
     //1
     //前端传来 [开始,结束] 下标,然后服务器根据要求开始查询数据库
-    //userId从token中获取吧
+    //userId从token中获取
     //查询文章表和讨论表,先分页查询10条文章,10条讨论.然后根据 排序算法,对这20条数据进行排序.最后返回给前端
     @RequestMapping("/{operation}/getPreviews")
     public Response getAllTopicAll(@RequestParam(defaultValue = "0",required = false) int pageStart,
@@ -45,9 +45,7 @@ public class CircleController {
 
         //根据operationName,判断查询的是全部,讨论还是文章,还是官方题解
 
-        if(operation.equals("QuestionAnswer")){//暂时先不写,先把文章的弄完
-
-        }else if(operation.equals("Article")){
+        if(operation.equals("Article")){
             //首先是获取20条文章预览
             //获取文章列表,需要传入  当前用户id(可为null),开始页码,结束页码
             List<ArticlePreview> articlePreviews = circleService.getArticlePreviewList(null,pageStart,pageEnd);
@@ -109,6 +107,7 @@ public class CircleController {
     }
 
 
+
     /**
      * 4
      * 这个user信息应该从token中获取,暂时设置为从前端获取
@@ -129,23 +128,6 @@ public class CircleController {
     }
 
 
-//    /**
-////     * 5
-////     * 获取文章的评论和回复列表,用于点击我的评论显示(评论和回复在一起显示)
-////     */
-////    @RequestMapping("/{articleId}/commentList")
-////    public Response getArticleCommentList(@PathVariable Integer articleId,
-////                                          @RequestParam(defaultValue = "0",required = false) int pageStart,
-////                                          @RequestParam(defaultValue = "20",required = false) int pageEnd){
-////        Response response = new Response();
-////
-////        List<ArticleComment> articleCommentList = circleService.getArticleCommentListByArticleIdAndPage(articleId,pageStart,pageEnd);
-////
-////        response.setCode(200);
-////        response.setData(articleCommentList);
-////
-////        return response;
-////    }
 
 
 
@@ -293,6 +275,30 @@ public class CircleController {
         return response;
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
