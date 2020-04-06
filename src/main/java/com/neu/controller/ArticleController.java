@@ -1,15 +1,25 @@
 package com.neu.controller;
 
 import com.neu.common.Response;
-import com.neu.dto.request.ArticleRequest;
+import com.neu.common.Utils;
+import com.neu.dto.request.CreateArticleRequest;
+import com.neu.dto.request.EditArticleRequest;
 import com.neu.dto.response.ArticleDetail;
 import com.neu.dto.response.ArticlePreview;
 import com.neu.entity.Article;
+import com.neu.exception.BaseException;
 import com.neu.exception.UnknownException;
+import com.neu.exception.general.FormValidatorException;
+import com.neu.exception.general.PermissionDeniedException;
+import com.neu.exception.general.ResourceNotExistException;
 import com.neu.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.rmi.CORBA.Util;
+import javax.validation.Valid;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -20,41 +30,30 @@ public class ArticleController {
     ArticleService articleService;
 
 
-
-
-
-
-
     //1
     //根据topicId获取话题下对应文章列表,若topicId=0,则查询全部topic下文章
     //前端传来 [开始,结束] 下标,然后服务器根据要求开始查询数据库
     //userId从token中获取
     //查询文章表和讨论表,先分页查询10条文章,10条讨论.然后根据 排序算法,对这20条数据进行排序.最后返回给前端
-    @GetMapping("/{topicId}/getArticleList")
+    @GetMapping("/list/{topicId}")
     public Response getAllTopicAll(@RequestParam(defaultValue = "0",required = false) int pageStart,
                                    @RequestParam(defaultValue = "20",required = false) int pageEnd,
                                    @PathVariable Integer topicId){
 
-        Response response = new Response();
-
-        //根据operationName,判断查询的是全部,讨论还是文章,还是官方题解
+        List<ArticlePreview> articlePreviews=null;
 
         if(topicId==0){//查询全部文章
             //首先是获取20条文章预览
             //获取文章列表,需要传入  当前用户id(可为null),开始页码,结束页码
-            List<ArticlePreview> articlePreviews = articleService.getArticlePreviewList(null,pageStart,pageEnd);
-            response.setCode(200);
-            response.setData(articlePreviews);
+            articlePreviews = articleService.getArticlePreviewList(null,pageStart,pageEnd);
         }else {
-            List<ArticlePreview> articlePreviews = articleService.getArticlePreviewListByTopicId(null,topicId,pageStart,pageEnd);
-            response.setCode(200);
-            response.setData(articlePreviews);
+            articlePreviews = articleService.getArticlePreviewListByTopicId(null,topicId,pageStart,pageEnd);
         }
 
 
 
 
-        return response;
+        return new Response(0,articlePreviews);
 
     }
 
@@ -71,16 +70,12 @@ public class ArticleController {
      * 参数:文章id
      */
     //获取文章详情
-    @GetMapping("/{articleId}/get")
+    @GetMapping("/{articleId}")
     public Response getOneArticle(@PathVariable Integer articleId){
-        Response response = new Response();
-
 
         ArticleDetail articleDetail = articleService.getArticleDetail(articleId);
-        response.setCode(200);
-        response.setData(articleDetail);
 
-        return response;
+        return new Response(0,articleDetail);
     }
 
 
@@ -88,26 +83,25 @@ public class ArticleController {
     /** 3
      * 写文章
      */
-    @PostMapping("/post")
-    public Response newArticle(@RequestBody ArticleRequest request){
+    @PostMapping("")
+    public Response newArticle(@RequestBody @Valid CreateArticleRequest request,
+                               BindingResult bindingResult) throws BaseException {
 
-        Response response = new Response();
+        if(bindingResult.hasErrors()) {
+            throw new FormValidatorException(bindingResult);
+        }
 
-        Article article = new Article();
-        article.setCreatorId(request.getCreatorId());
-        article.setTopicId(request.getTopicId());
-        article.setThumbnail(request.getThumbnail());
-        article.setTitle(request.getTitle());
-        article.setMessage(request.getMessage());
-        article.setSummary(request.getSummary());
-        article.setInitializeTime(request.getInitializeTime());
+        Integer userId=1;
+
+        //数据绑定
+        Article article = new Article(request);
+        article.setCreatorId(userId);
+        //存进数据库的是UTC时间,传给前端时设置时区即可
 
         Integer newId = articleService.addOneArticle(article);
 
-        response.setCode(200);
-        response.setData(newId);
 
-        return response;
+        return new Response(0,newId);
 
     }
 
@@ -117,18 +111,15 @@ public class ArticleController {
      * 4
      * 这个user信息应该从token中获取,暂时设置为从前端获取
      */
-    @GetMapping("/{authorId}/getMyArticleList")
+    @GetMapping("/MyArticleList/{authorId}")
     public Response getMyArticle(@PathVariable Integer authorId,
                                  @RequestParam(defaultValue = "0",required = false) int pageStart,
                                  @RequestParam(defaultValue = "20",required = false) int pageEnd){
 
 
-        Response response = new Response();
         List<ArticlePreview> articlePreviews = articleService.getMyArticleList(authorId,pageStart,pageEnd);
-        response.setCode(200);
-        response.setData(articlePreviews);
 
-        return response;
+        return new Response(0,articlePreviews);
 
     }
 
@@ -138,40 +129,68 @@ public class ArticleController {
      * 修改文章
      *
      */
-    @PutMapping("/put")
-    public Response putArticle(@RequestBody Article article){
+    @PutMapping("")
+    public Response putArticle(@RequestBody @Valid EditArticleRequest editRequest
+                                ,BindingResult bindingResult) throws BaseException {
 
+        //1 参数校验发现错误
+        if(bindingResult.hasErrors()) {
+            throw new FormValidatorException(bindingResult);
+        }
 
-        Response response = new Response();
-        Boolean hasUpdate = articleService.putOneArticle(article);
-        response.setCode(200);
-        response.setData(hasUpdate);
+        Integer userId = 1;//以后从token中获取
 
-        return response;
+        //2 查一下该id对应文章是否存在
+        Article origin = articleService.getById(editRequest.getId());
+        if(origin==null){
+            throw new ResourceNotExistException("文章");
+        }
+
+        //3 鉴权
+        if(origin.getCreatorId()!=userId){
+            throw new PermissionDeniedException();
+        }
+
+        //绑定数据
+        Article article = new Article(editRequest);
+
+        //4 向数据库update
+        if(!articleService.putOneArticle(article)){
+            throw new UnknownException("修改保存失败");
+        }
+
+        return new Response(0,"修改成功");
 
     }
+
+
+
 
     /**
      * 11
      * 删除文章
      *
      */
-    @DeleteMapping("/{articleId}/delete")
-    public Response deleteArticle(@PathVariable Integer articleId) throws UnknownException {
+    @DeleteMapping("/{articleId}")
+    public Response deleteArticle(@PathVariable Integer articleId) throws BaseException {
 
-
-        Response response = new Response();
-        Boolean hasDelete = articleService.deleteOneArticle(articleId);
-
-        if(hasDelete!=true) {
-            throw new UnknownException("修改保存失败");
+        Integer userId = 1;//以后从token中获取
+        //查询文章是否存在
+        Article origin = articleService.getById(articleId);
+        if(origin==null){
+            throw new ResourceNotExistException("文章");
+        }
+        //鉴权
+        if(origin.getCreatorId()!=userId){
+            throw new PermissionDeniedException();
         }
 
-        response.setCode(200);
-        response.setData(hasDelete);
+        //向数据库delete
+        if(!articleService.deleteOneArticle(articleId)){
+            throw new UnknownException("数据库删除失败");
+        }
 
-        return response;
-
+        return new Response(0,"删除成功");
     }
 
 

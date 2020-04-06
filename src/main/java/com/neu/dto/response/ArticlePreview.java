@@ -1,8 +1,9 @@
 package com.neu.dto.response;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.neu.vo.Author;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 public class ArticlePreview {
@@ -10,8 +11,10 @@ public class ArticlePreview {
     private String title;
     private Integer browse;//点击数
     private String summary;//概括
-    private LocalDateTime initializeTime;
-    private LocalDateTime editTime;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date initializeTime;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date editTime;
     private String thumbnail;//缩略图
     private String topicName;//话题名,比如算法和数据结构
     private List<String> tags;//存放标签的列表
@@ -48,19 +51,19 @@ public class ArticlePreview {
         this.browse = browse;
     }
 
-    public LocalDateTime getInitializeTime() {
+    public Date getInitializeTime() {
         return initializeTime;
     }
 
-    public void setInitializeTime(LocalDateTime initializeTime) {
+    public void setInitializeTime(Date initializeTime) {
         this.initializeTime = initializeTime;
     }
 
-    public LocalDateTime getEditTime() {
+    public Date getEditTime() {
         return editTime;
     }
 
-    public void setEditTime(LocalDateTime editTime) {
+    public void setEditTime(Date editTime) {
         this.editTime = editTime;
     }
 

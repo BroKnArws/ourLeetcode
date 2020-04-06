@@ -1,8 +1,11 @@
 package com.neu.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.neu.dto.request.ArticleRequest;
+import com.neu.common.Utils;
+import com.neu.dto.request.CreateArticleRequest;
+import com.neu.dto.request.EditArticleRequest;
 
+import javax.rmi.CORBA.Util;
 import java.util.Date;
 
 public class Article {
@@ -19,11 +22,28 @@ public class Article {
     private Integer thinks;
     private Integer surprises;
     private Date initializeTime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date editTime;
     private Integer follows;
     private Integer browse;
 
+    public Article(EditArticleRequest request) {
+        this.id = request.getId();
+        this.topicId = request.getTopicId();
+        this.title = request.getTitle();
+        this.thumbnail = request.getThumbnail();
+        this.message = request.getMessage();
+        this.summary = request.getSummary();
+        this.editTime = Utils.currentTime();
+    }
+
+    public Article(CreateArticleRequest request) {
+        this.topicId = request.getTopicId();
+        this.title = request.getTitle();
+        this.thumbnail = request.getThumbnail();
+        this.message = request.getMessage();
+        this.summary = request.getSummary();
+        this.initializeTime = Utils.currentTime();
+    }
 
     public Article() {
     }

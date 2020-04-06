@@ -53,7 +53,8 @@ public class DraftService {
     }
 
 
-
-
-
+    public Draft getById(Integer id) {
+        Draft draft = draftMapper.selectDraftDetailById(id);
+        return draft;
+    }
 }

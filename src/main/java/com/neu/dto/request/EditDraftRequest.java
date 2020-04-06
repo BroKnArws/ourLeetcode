@@ -2,19 +2,25 @@ package com.neu.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.util.Date;
 import java.util.List;
 
-public class DraftRequest {
+/**
+ * 用来更新草稿
+ */
+
+public class EditDraftRequest {
+    @NotNull
     private Integer id;
+    @NotNull
     private Integer topicId;
-    private Integer authorId;
-    private String title;
+    private String title;//标题,内容,缩略图都可以是Null
     private String content;
     private String thumbnail;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date editTime;
-    private List<String> tags;//暂时不写
+    //标签服务用redis来做
 
     public Integer getId() {
         return id;
@@ -30,14 +36,6 @@ public class DraftRequest {
 
     public void setTopicId(Integer topicId) {
         this.topicId = topicId;
-    }
-
-    public Integer getAuthorId() {
-        return authorId;
-    }
-
-    public void setAuthorId(Integer authorId) {
-        this.authorId = authorId;
     }
 
     public String getTitle() {
@@ -64,19 +62,6 @@ public class DraftRequest {
         this.thumbnail = thumbnail;
     }
 
-    public Date getEditTime() {
-        return editTime;
-    }
 
-    public void setEditTime(Date editTime) {
-        this.editTime = editTime;
-    }
 
-    public List<String> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<String> tags) {
-        this.tags = tags;
-    }
 }

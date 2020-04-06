@@ -24,22 +24,13 @@
 
     <update id="com.neu.mapper.ArticleMapper.updateArticle">
         update article
-        set creator_id = #{creatorId},
+        set
             topic_id = #{topicId},
             title = #{title},
             thumbnail = #{thumbnail},
             message = #{message},
             summary = #{summary},
-            article_comments = #{articleComments},
-            likes = #{likes},
-            thinks = #{thinks},
-            surprises = #{surprises},
-            <if test="initializeTime!=null">
-            initialize_time = #{initializeTime},
-            </if>
-            edit_time = #{editTime},
-            follows = #{follows},
-            browse = #{browse}
+            edit_time = #{editTime}
         where id = #{id}
     </update>
 

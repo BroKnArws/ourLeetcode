@@ -1,6 +1,9 @@
 package com.neu.entity;
 
-import com.neu.dto.request.DraftRequest;
+import com.neu.common.Utils;
+import com.neu.dto.request.CreateDraftRequest;
+import com.neu.dto.request.EditArticleRequest;
+import com.neu.dto.request.EditDraftRequest;
 
 import java.util.Date;
 
@@ -17,12 +20,18 @@ public class Draft {
     public Draft() {
     }
 
-    public Draft(DraftRequest request) {
+    public Draft(CreateDraftRequest request) {
+        this.topicId = request.getTopicId();
+        this.title = request.getTitle();
+        this.editTime = Utils.currentTime();
+        this.content = request.getContent();
+        this.thumbnail = request.getThumbnail();
+    }
+    public Draft(EditDraftRequest request) {
         this.id = request.getId();
         this.topicId = request.getTopicId();
-        this.authorId = request.getAuthorId();
         this.title = request.getTitle();
-        this.editTime = request.getEditTime();
+        this.editTime = Utils.currentTime();
         this.content = request.getContent();
         this.thumbnail = request.getThumbnail();
     }

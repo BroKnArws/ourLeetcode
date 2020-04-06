@@ -40,10 +40,11 @@ public class Author {
         this.userAvatar = userAvatar;
     }
 
+
     public Author(LeetcodeUser user){
         this.id = user.getId();
-        this.userName = user.getUserName();
-        this.userAvatar = user.getUserAvatar();
+        this.userName = user.getName();
+        this.userAvatar = user.getAvatar();
 
     }
 

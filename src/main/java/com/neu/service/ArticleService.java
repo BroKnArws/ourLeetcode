@@ -1,5 +1,6 @@
 package com.neu.service;
 
+import com.neu.dto.request.EditArticleRequest;
 import com.neu.dto.response.ArticleDetail;
 import com.neu.dto.response.ArticlePreview;
 import com.neu.entity.Article;
@@ -79,6 +80,7 @@ public class ArticleService {
 
     public Boolean putOneArticle(Article article) {
 
+
         Boolean hasUpdate = articleMapper.updateArticle(article);
 
         return hasUpdate;
@@ -98,5 +100,8 @@ public class ArticleService {
     }
 
 
-
+    public Article getById(Integer id) {
+        Article article = articleMapper.selectOneArticleById(id);
+        return article;
+    }
 }
