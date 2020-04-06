@@ -25,4 +25,5 @@ public interface CircleMapper {
                                                                 @Param("startPage")Integer startPage,
                                                                 @Param("endPage")Integer endPage);
 
+    List<ArticlePreview> selectArticlePreviewsByTopicIdAndPage(String userId,@Param("topicId")Integer topicId, @Param("startPage")Integer startPage,@Param("endPage")Integer endPage);
 }
