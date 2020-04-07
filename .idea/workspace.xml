@@ -2,11 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b4524ef-9021-458c-8660-8da0d28a6b90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/controller/BDJobsInquireController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/entity/BDPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/entity/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/exception/general/NoResultException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/mapper/BDJobsInquireMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/service/BDJobsInquireService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/neu/service/RedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BDJobsInquireMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a699bec-a1ed-4f09-b380-44a9a7b79a3b.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a699bec-a1ed-4f09-b380-44a9a7b79a3b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ourLeetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ourLeetcode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/controller/DiscussionQueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neu/controller/DiscussionQueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/exception/general/PermissionDeniedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neu/exception/general/PermissionDeniedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/exception/general/ResourceNotExistedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/common/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neu/common/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/interceptors/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neu/interceptors/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/mapper/TokenMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neu/mapper/TokenMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neu/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neu/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/TokenMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/TokenMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/ourLeetcode.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/common/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/common/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/controller/CircleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/controller/CircleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/controller/DiscussionQueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/controller/DiscussionQueController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/dto/request/ArticleRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/dto/request/DraftRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/dto/response/ArticlePreview.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/dto/response/ArticlePreview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/dto/response/OneArticle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/dto/response/QuestionAnswer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/entity/Draft.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/entity/Draft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/entity/LeetcodeUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/entity/LeetcodeUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/mapper/ArticleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/mapper/CircleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/mapper/CircleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/mapper/DraftMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/mapper/DraftMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/service/CircleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/service/CircleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/service/impl/CircleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neu/vo/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neu/vo/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CircleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DraftMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/DiscussionQueMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/DiscussionQueMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +120,21 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="H:\back_server\Maven\MyLocalRepository" />
-        <option name="userSettingsFile" value="H:\back_server\Maven\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="D:\MavenRepository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1ZwW5wyvLQYJXWXVCscX6AYuOv0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -92,16 +147,42 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mybatis/mapper" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3954023" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.neu.service" />
+      <recent name="com.neu.mapper" />
+      <recent name="com.neu.exception.general" />
+      <recent name="com.neu.entity" />
+      <recent name="com.neu.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ourLeetcode\src\main\resources\mybatis\mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OurleetcodeApplication (1)">
+    <configuration name="OurleetcodeApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ourLeetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.OurleetcodeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OurleetcodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ourleetcode" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.OurleetcodeApplication" />
@@ -109,6 +190,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.OurleetcodeApplication (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -141,6 +227,7 @@
       <workItem from="1586017982405" duration="136000" />
       <workItem from="1586066665443" duration="10097000" />
       <workItem from="1586099696783" duration="2025000" />
+      <workItem from="1586266205077" duration="716000" />
     </task>
     <task id="LOCAL-00001" summary="用户添加讨论接口">
       <created>1586017554011</created>
@@ -201,52 +288,62 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586015298481" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586101464284">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="499" y="170" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586266701026">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101464284" />
+    <state x="499" y="170" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1586266701026" />
     <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1586101909403">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101909403" />
     <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1586017932494" />
-    <state x="296" y="106" key="FileChooserDialogImpl" timestamp="1586013604996">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="56" y="217" key="FileChooserDialogImpl" timestamp="1586266252368">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="296" y="106" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586013604996" />
     <state x="296" y="106" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586009759003" />
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1586101919222">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="56" y="217" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586266252368" />
+    <state width="1358" height="176" key="GridCell.Tab.0.bottom" timestamp="1586266938778">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919222" />
-    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1586101919221">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586266938778" />
+    <state width="1358" height="176" key="GridCell.Tab.0.center" timestamp="1586266938778">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919221" />
-    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1586101919221">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586266938778" />
+    <state width="1358" height="176" key="GridCell.Tab.0.left" timestamp="1586266938777">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919221" />
-    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1586101919221">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586266938777" />
+    <state width="1358" height="176" key="GridCell.Tab.0.right" timestamp="1586266938778">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919221" />
-    <state width="1493" height="112" key="GridCell.Tab.1.bottom" timestamp="1586101919222">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586266938778" />
+    <state width="1358" height="176" key="GridCell.Tab.1.bottom" timestamp="1586266938779">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.1.bottom/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919222" />
-    <state width="1493" height="112" key="GridCell.Tab.1.center" timestamp="1586101919222">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586266938779" />
+    <state width="1358" height="176" key="GridCell.Tab.1.center" timestamp="1586266938778">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.1.center/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919222" />
-    <state width="1493" height="112" key="GridCell.Tab.1.left" timestamp="1586101919222">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586266938778" />
+    <state width="1358" height="176" key="GridCell.Tab.1.left" timestamp="1586266938778">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.1.left/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919222" />
-    <state width="1493" height="112" key="GridCell.Tab.1.right" timestamp="1586101919222">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1358" height="176" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586266938778" />
+    <state width="1358" height="176" key="GridCell.Tab.1.right" timestamp="1586266938779">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="112" key="GridCell.Tab.1.right/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101919222" />
+    <state width="1358" height="176" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586266938779" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1586101862225">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -259,11 +356,12 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="477" y="133" key="MultipleFileMergeDialog/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586101384068" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1586013608465">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1586266258822">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.834/1920.0.1234.896@0.0.1536.834" timestamp="1586013608465" />
     <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1585750649418" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586266258822" />
     <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1586018012968">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

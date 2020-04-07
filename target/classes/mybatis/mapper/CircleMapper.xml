@@ -19,7 +19,7 @@
         <result column="edit_time" property="editTime"/>
         <result column="thumbnail" property="thumbnail"/>
         <result column="topic_name" property="topicName"/>
-        <result column="likes" property="likes"/>
+        <result column="a_likes" property="likes"/>
         <result column="thinks" property="thinks"/>
         <result column="surprises" property="surprises"/>
         <result column="article_comments" property="articleComments"/>
@@ -41,7 +41,7 @@
 
 
     <select id="com.neu.mapper.CircleMapper.selectArticlePreviewsByPage" resultMap="ArticlePreviews">
-        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,likes,thinks,surprises,article_comments,u.id u_id,u.user_name u_user_name,u.user_avatar u_user_avatar
+        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,a.likes a_likes,thinks,surprises,article_comments,u.id u_id,u.name u_user_name,u.avatar u_user_avatar
         from article a
         LEFT JOIN topic  t
         ON a.topic_id = t.id
@@ -51,7 +51,7 @@
     </select>
 
     <select id="com.neu.mapper.CircleMapper.selectArticlePreviewsByAuthorIdAndPage" resultMap="ArticlePreviews">
-        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,likes,thinks,surprises,article_comments,u.id u_id,u.user_name u_user_name,u.user_avatar u_user_avatar
+        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,a.likes a_likes,thinks,surprises,article_comments,u.id u_id,u.name u_user_name,u.avatar u_user_avatar
         from article a
         LEFT JOIN topic  t
         ON a.topic_id = t.id
@@ -60,6 +60,23 @@
         where creator_id = #{authorId}
         limit #{startPage},#{endPage}
     </select>
+
+
+    <select id="com.neu.mapper.CircleMapper.selectArticlePreviewsByTopicIdAndPage" resultMap="ArticlePreviews">
+        select a.id a_id,title,browse,summary,initialize_time,edit_time,thumbnail,topic_name,a.likes a_likes,thinks,surprises,article_comments,u.id u_id,u.name u_user_name,u.avatar u_user_avatar
+        from article a
+                 LEFT JOIN topic  t
+                           ON a.topic_id = t.id
+                 LEFT JOIN leetcode_user u
+                           ON a.creator_id = u.id
+        where a.topic_id = #{topicId}
+        limit #{startPage},#{endPage}
+    </select>
+
+
+
+
+
 
 
 </mapper>

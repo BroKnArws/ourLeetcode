@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neu.mapper.BDJobsInquireMapper">
+
+    <resultMap id="PositionResultMap" type="com.neu.entity.BDPosition">
+        <result column="job_name" property="jobName"/>
+        <result column="job_category" property="jobCategory"/>
+        <result column="workplace" property="workPlace"/>
+        <result column="pub_time" property="pubTime"/>
+    </resultMap>
+
+    <select id="com.neu.mapper.BDJobsInquireMapper.getBDPosition" resultMap="PositionResultMap">
+        select job_name,job_category,workplace,pub_time
+        from jobs_bytedance
+        where
+        <if test="q1!=null">
+            job_name like concat(concat('%',#{q1}),'%')
+            OR job_category like concat(concat('%',#{q1}),'%')
+            OR job_type like concat(concat('%',#{q1}),'%')
+            OR workplace like concat(concat('%',#{q1}),'%')
+        </if>
+        <if test="summary!=null">
+            AND job_category=#{summary}
+        </if>
+        <if test="position_type!=null">
+            AND job_type=#{position_type}
+         </if>
+        <if test="city!=null">
+            --             遍历数组查询
+            AND  workplace in
+            <foreach collection="city" item="workplace" open="(" close=")" separator=",">
+                #{workplace}
+            </foreach>
+        </if>
+
+    </select>
+
+</mapper>

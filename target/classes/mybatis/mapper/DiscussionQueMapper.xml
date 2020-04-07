@@ -29,4 +29,22 @@
     VALUES
         (#{creatorId},#{topicId},#{title},#{message},#{initializeTime},#{editTime})
     </insert>
+    <update id="EditDiscussionQue" parameterType="com.neu.entity.DiscussionQue">
+        UPDATE discussion_que
+        SET
+        title = #{title},
+        message = #{message},
+        edit_time = #{editTime}
+        WHERE id = #{id}
+    </update>
+    <select id="getDiscussionQueById" resultMap="BaseResultMap" >
+        SELECT *
+        FROM discussion_que
+        WHERE id = #{id}
+    </select>
+    <delete id="delDiscussionQueById" parameterType="int">
+        DELETE FROM
+        discussion_que
+        WHERE id = #{id}
+    </delete>
 </mapper>
