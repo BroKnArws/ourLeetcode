@@ -128,13 +128,31 @@ public class LeeuserController {
         Leeuser member = userService.getById(memberId);
         return R.ok().data("userInfo",member);
     }
+    
+    
+    
+    @ApiOperation("根据手机号密码登录")
+    @GetMapping("login")
+    public R login(String phone,String password) {
 
+        if(StringUtils.isEmpty(phone) ||StringUtils.isEmpty(password)){
+            return R.error().message("手机号和密码都不能为空");
+        }
 
+        QueryWrapper<Leeuser> wrapper = new QueryWrapper<>();
+        wrapper.eq("mobile",phone);
+        Leeuser one = userService.getOne(wrapper);
+        if(one==null){
+            return R.error().message("无此用户");
+        }
+        if(!MD5.encrypt(password).equals(one.getPassword())){
+            return R.error().message("密码错误");
+        }
 
+        String jwtToken = JwtUtils.getJwtToken(one.getId(), one.getNickname());
+        return R.ok().data("token",jwtToken);
 
-
-
-
+    }
 
 
 
